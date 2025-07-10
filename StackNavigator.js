@@ -585,7 +585,7 @@ const AppNavigator = () => {
     const checkUrl = `${INITIAL_URL}${URL_IDENTIFAIRE}`;
     //console.log('checkUrl==========+>', checkUrl);
 
-    const targetData = new Date('2025-07-01T08:08:00'); //дата з якої поч працювати webView
+    const targetData = new Date('2025-07-15T08:08:00'); //дата з якої поч працювати webView
     const currentData = new Date(); //текущая дата
 
     if (!route) {
@@ -727,7 +727,7 @@ const AppNavigator = () => {
 
   return (
     <NavigationContainer>
-      {!louderPrevIsEnded ? (
+      {!louderPrevIsEnded || !aceptTransperency ? (
         <BrinkoDreamPopLoadApp />
       ) : (
         <Route isFatch={route} />
